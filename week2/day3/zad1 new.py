@@ -33,7 +33,8 @@ if input_usera == a:
 
 
 elif input_usera == b:
-    input_usera_a = input("Podaj długość boku kwadratu : ")
+    input_usera_a =[a,b]
+    input_usera_a = input("Podaj długość boków kwadratu : ")
     input_usera_a = int(input_usera_a)
 
     Pole = input_usera_a*input_usera_a
