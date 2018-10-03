@@ -46,34 +46,48 @@ parz = 0
 nieparz = 0
 for number in range(100):
     if number%2==0:
-        parz=parz+1
+        parz += 1
     else:
-        nieparz=nieparz+1
-
-print("parzystych: ",parz, "nieparzystych: ", nieparz)
+        nieparz +=1
+a= "Parzyste {}, Nieparzyste {}".format(parz, nieparz)
+b= f"Parzyste {parz}, Nieparzyste {nieparz}"
+print(a)
+print(b)
 
 
 print("*************************")
 #ciag Fibbonaciego dla 100
-fib_one =1
+fib_one =0
 fib_two =1
-for number_fib in range(10):
-    fib_three =fib_one + fib_two
-    fib_one=fib_two
-    fib_two=fib_three
-    print(fib_three)
+
+print(fib_one)
+print(fib_two)
+for number_fib in range(100):
+    fib_three = fib_one + fib_two
+    if fib_three < 100:
+        fib_one=fib_two
+        fib_two=fib_three
+        print(fib_three)
+
+    else:
+        print ("koniec!")
+        break
+
 
 
 #silnia
 
 print("*************************")
+x = " "
 silnia=1
 number_silnia = 1
-print(number_silnia)
+
 for number_silnia in range(4):
 
     silnia = silnia *(number_silnia+1)
-    number_silnia = number_silnia+1
-    print("*", number_silnia)
+    number_silnia += 1
+    x= str(x) +"*"+ str(number_silnia)
 
-print("=",silnia)
+print(x, "=",silnia)
+
+
