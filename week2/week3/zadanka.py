@@ -45,4 +45,44 @@ for el_ext in lista_ext:
 print("min = " , min)
 print("max = ", max)
 
+"""
+#importy
+import math
+import sys
+from python_file import test
+# from test.python_file import *  nie dziala
 
+print(test.PI)      #importuje zmienna PI z pliku test z folderu python_file
+print(sys.path)
+
+print(test.PI2)
+a=2
+b=8
+c=math.sqrt(b)
+d=math.sqrt(a)
+
+print(c)
+"""
+print("*********************")
+print("*********************")
+
+
+#sito erystotelesa - wyszukiwanie liczb pierwszych
+
+nn = 10
+
+tablica_nowa = []
+#tworze tablice
+for z in range(2, nn):
+    tablica_nowa.append(z)
+
+print(tablica_nowa)
+
+# szukam wielokrotnsci liczb
+
+for z in tablica_nowa:
+    for j in range(2, nn):
+        if (z * j) in tablica_nowa:
+            tablica_nowa.remove(z * j)
+
+print("Liczby pierwsze z zakresu : ",tablica_nowa)
