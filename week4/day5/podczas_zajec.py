@@ -12,7 +12,7 @@ def foo(imie, nazwisko):
 
 napis=foo("celina","eugenia")
 print(napis)
-"""
+
 #temat na rozmowie kwalifikacyjnej - bez cleara do listy ciagle beda dodawane argumenty
 
 def dodaj_imie(imie, imiona = None):
@@ -27,3 +27,30 @@ dodaj_imie("Monia",i)
 dodaj_imie("Jurek",i)
 
 print(i)
+
+
+
+imie = "Ania"
+def i():
+    imie = "Jola"
+    print("w srodku   ",imie)
+
+i()
+print(" NA ZEWNATRZ",imie)
+
+
+imie = "Ania"
+def i():
+    #global imie
+    imie = "Jola"
+    print("w srodku   ",imie)
+
+i()
+print(" NA ZEWNATRZ",imie)
+"""
+
+imiona=[]
+def i():
+    imiona.append("Ania")
+i()
+print(" NA ZEWNATRZ",imiona)
