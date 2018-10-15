@@ -97,3 +97,15 @@ def trywial_palindrom(slowoo):
 
 m= trywial_palindrom("kajafgdgk")
 print(m)
+
+#szukanei liczb perfekcyjnych tzn. liczba której suma wszystkie dzielniki naruralne lub suma wszystkich dzielników plu sta l
+#np 6, 1+2+3 =6
+#   1. test czy jest dzielnikiem
+#   2. lista na dzielniki
+#   3. sumator z zadania 1 (*import)
+#   4. porównanie wyników
+
+#owrotna notacja polska
+
+#trojka pascala - pseudo kod
+
