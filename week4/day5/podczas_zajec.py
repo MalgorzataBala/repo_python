@@ -78,8 +78,8 @@ def palindrom(slowo):
     while k in range(len_slowo):
         if k != j:
             if slowo[k] == slowo[j]:
-                j=len_slowo-1
-                k = k + 1
+                j-=1
+                k +=1
             else:
                 slowo= slowo+" nie"
         k = len_slowo
@@ -90,6 +90,8 @@ print(z)
 
 
 def trywial_palindrom(slowoo):
+    #samym returnem
+    #return slowoo==slowoo[::-1]
     if slowoo == slowoo[::-1]:
         return slowoo+" jest palidromem"
     else:
