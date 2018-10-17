@@ -1,0 +1,57 @@
+"""
+def maxx (a,b):
+    if a>b:
+        max_ab = a
+    elif b>a:
+        max_ab = b
+    else:
+        max_ab= "nie ma maxa, bo "+ a+ "="+b
+    return max_ab
+
+input_usera1 = input("Podaj pierwsza liczbe: ")
+input_usera2 = input("Podaj druga liczbe: ")
+
+z= maxx(input_usera1,input_usera2)
+print("Max z ", input_usera1, input_usera2, "wynosi: ", z)
+
+
+def my_maxx (lista_ext):
+    max_el = lista_ext[0]
+    for el_ext in lista_ext:
+        if el_ext.isdigit()==True:
+            if max_el < el_ext:
+                max_el = el_ext
+        else:
+            max_el = "Podaj liste liczb!!"
+            return  max_el
+    return max_el
+
+
+input_usera1 = input("Podaj liste liczb: ")
+
+z= my_maxx(input_usera1)
+print("Max z ", input_usera1, "wynosi: ", z)
+
+
+f = open("test.txt","a")
+f.writelines(["\n Ala ma kota"," , \n Pies ma Ole."])
+
+
+
+input_usera = input("Wpisz cos, a ja to zapisze w pliku: ")
+
+f =open("test.txt","w")
+f.writelines( [input_usera, "\t Ala ma kota \n "])
+#line = f.readline(1)
+#print(line)
+
+f.close()
+
+"""
+
+with open("test.txt") as plik:
+    #input_usera = input("Wpisz cos, a ja to zapisze w pliku: ")
+    tresc_linia = plik.readline()
+    print(tresc_linia.split(" ")) #dzieli nam napis na liste stringów
+    print(type(tresc_linia[0]))
+    d= [["Jan","Kowalski","425126"]]
