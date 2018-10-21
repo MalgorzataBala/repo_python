@@ -10,8 +10,6 @@ def sumator(lista_suma):
         suma = suma + i
     return suma
 
-
-
 def duplikaty(listaa):
     druga_lista =[]
     for i in listaa:
@@ -22,12 +20,17 @@ def duplikaty(listaa):
 def dzielnik(lista_dziel):
     dzielniki = []
     x=len(lista_dziel)
+    #print(x)
     liczba = lista_dziel.index(x)
+    #print(liczba)
     index = 1
-    while index <= liczba:
-        if liczba%index==0:
+    while index <= x/2:
+        #print(index,"<=",x,"/2")
+        if x %index == 0:
             dzielniki.append(index)
+           # print(dzielniki)
         index = index + 1
+    return dzielniki
 
 
 def l_perfekcyjna(liczba):
@@ -43,5 +46,8 @@ def l_perfekcyjna(liczba):
 
 
 liczbaa= 28
-z = dzielnik(range(1,liczbaa))
+#zakres = range(1,liczbaa+1)
+#z= dzielnik(zakres)
+#z = dzielnik(range(1,liczbaa))
+z=l_perfekcyjna(liczbaa)
 print(z)
