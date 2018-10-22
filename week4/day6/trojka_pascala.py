@@ -1,6 +1,5 @@
 #trojkat pascala
-#ile rzedow row = k, // ile rzedów tyle dzialan do wykonania
-# skrajne elenty ==1
+
 import math
 row =6
 list_row=range(2,row+1)
@@ -14,7 +13,7 @@ for i in list_row:
     d = len(lista_startowa)
     b = int(math.floor(d/2)+1)
     for j in range(b):
-        k= int(lista_startowa[j]) #+ lista_startowa[j+1]
+        k= int(lista_startowa[j])
         #print("k = ", k)
         if j>=b-1:
             break
