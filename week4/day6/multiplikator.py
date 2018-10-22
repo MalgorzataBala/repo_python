@@ -4,7 +4,7 @@
 def multiplikator(zakres):
     silnia = 1
     for i in zakres:
-        silnia = silnia*i
+        silnia *= i
     return silnia
 
 x = int(input("Podaj jakąć liczbę, a ja obliczę jej silnie: "))
