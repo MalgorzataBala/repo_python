@@ -7,8 +7,8 @@ def licz_male_duze_litery(x):
     ilosc_znakow = int(len(zadany_string))
     duze_litery = 0
     male_litery =0
-    for i in range(ilosc_znakow):
-        numer_ascii = ord(zadany_string[i])
+    for i in x:
+        numer_ascii = ord(i)
 
         if numer_ascii>=65 and numer_ascii<=90:
             duze_litery = duze_litery+1
@@ -16,7 +16,8 @@ def licz_male_duze_litery(x):
             male_litery += 1
         else:
             return
-    return "Duze litery: ", duze_litery,"Małe litery: ", male_litery
+    #return "Duze litery: ", duze_litery,"Małe litery: ", male_litery
+    return f'Duze litery: {duze_litery}, Małe litery:  {male_litery}'
 
 
 
