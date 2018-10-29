@@ -18,6 +18,7 @@ class Account(object):
     def __init__(self, account_number, account_password):
         self.account_nr = account_number
         self.account_pass =  account_password
+        self.balance = 0
 
 class Card(object):
     def __init__(self, card_number, card_password):
