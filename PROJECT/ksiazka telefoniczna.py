@@ -19,7 +19,7 @@ if input_user == 1:
     elif input_szukaj == 2:
         print("Wyszukiwanie po nazwisku")
     elif input_szukaj == 3:
-        print("Wyszukiwanie po n telefonu")
+        print("Wyszukiwanie po n telefonu")s
 elif input_user == 2:
     print("Podaj imię, nazwisko, nr telefonu")
 elif input_user == 3:
