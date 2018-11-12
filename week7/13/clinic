@@ -1,0 +1,76 @@
+class Human:
+    def __init__(self, first_name, last_name):
+        self.first_name = first_name
+        self.last_name = last_name
+
+    @property
+    def full_name(self):
+        return "{} {}".format(self.first_name, self.last_name)
+
+
+class Doctor(Human):
+    def __repr__(self):
+        return f"Doctor: {self.full_name}"
+
+
+class Patient(Human):
+    def __repr__(self):
+        return f"Patient: {self.full_name}"
+
+
+class MaximumPatientExeception(Exception):
+    pass
+
+
+class Day:
+    def __init__(self, name):
+        self.name = name
+        self.schedule = {}
+
+    def append(self, doctor, patient):
+        if not doctor.full_name in self.schedule:
+            self.schedule[doctor.full_name] = []
+
+        if len(self.schedule[doctor.full_name]) > 3:
+            raise MaximumPatientExeception("Change day")
+
+        self.schedule[doctor.full_name].append(patient)
+
+
+class Clinic:
+    calendar = {
+
+    }
+    @classmethod
+    def schedule(cls, day, doctor, patient):
+        "zapisywac pacjenta do doktora"
+        if not day.name in cls.calendar:
+            cls.calendar[day.name] = day
+        cls.calendar[day.name].append(doctor, patient)
+
+
+    @classmethod
+    def print_per_doc(cls, full_doc_name):
+        "wyswietl pacjentow per doc"
+        pass
+
+    @classmethod
+    def print_per_day(cls, name):
+        "wyswietl pacjentow per day"
+        print(cls.calendar[name].schedule)
+
+doc = Doctor("x", "y")
+p1 = Patient("x", "y")
+p2 = Patient("x", "y")
+p3 = Patient("x", "y")
+p4 = Patient("x", "y")
+p5 = Patient("x", "y")
+
+pn = Day("poniedzialek")
+
+Clinic.schedule(pn, doc, p1)
+Clinic.schedule(pn, doc, p2)
+Clinic.schedule(pn, doc, p3)
+Clinic.schedule(pn, doc, p4)
+Clinic.schedule(pn, doc, p5)
+Clinic.print_per_day('poniedzialek')
